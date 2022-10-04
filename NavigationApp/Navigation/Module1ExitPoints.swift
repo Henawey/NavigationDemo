@@ -13,17 +13,19 @@ import Module2
 /// Return ViewController
 struct Module1ExitPoints: Module1.ExitPoints {
     func buildModule2Screen1() -> UIViewController {
-        return Module2.EntryPoints(
-            dependancies: Module2.Dependancies(networkManager: NetworkManager()),
-            exitPoints: Module2ExitPoints()
-        ).buildScreen1()
+        return Module2.EntryPoints.default.buildScreen1()
     }
 
     func buildModule1Screen2() -> UIViewController {
+        return Module1.EntryPoints.default.buildScreen2()
+    }
+}
+
+extension Module1.EntryPoints {
+    static var `default`: Module1.EntryPoints = {
         return Module1.EntryPoints(
             dependancies: Module1.Dependancies(),
-            exitPoints: self
+            exitPoints: Module1ExitPoints()
         )
-        .buildScreen2()
-    }
+    }()
 }

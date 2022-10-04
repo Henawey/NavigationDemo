@@ -54,10 +54,9 @@ private extension AppExitPoints {
 
         return Module2.EntryPoints(
             dependancies: dependancies,
-            exitPoints: module2ExitPoints,
-            readyForNextAction: postAction
+            exitPoints: module2ExitPoints
         )
-        .buildScreen1()
+        .buildScreen1(readyForNextAction: postAction)
     }
 }
 
@@ -65,3 +64,4 @@ private extension AppExitPoints {
 // ----> module1 (Strong type)
 // ---->(decoder)--> (Weak type) -->(encoder)
 // ----> module2 (strong type)
+

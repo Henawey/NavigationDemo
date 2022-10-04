@@ -6,31 +6,18 @@
 import class UIKit.UIViewController
 import Foundation
 
-public typealias PostAction = () -> Void
-
-public struct Dependancies {
-    let networkManager: NetworkManager
-
-    public init(networkManager: NetworkManager) {
-        self.networkManager = networkManager
-    }
-}
-
 /// Entry points
 public struct EntryPoints {
     private let dependancies: Dependancies
     private let exitPoints: ExitPoints
-    private let readyForNextAction: PostAction
 
     public init(dependancies: Dependancies,
-                exitPoints: ExitPoints,
-                readyForNextAction: @escaping PostAction = {}) {
+                exitPoints: ExitPoints) {
         self.dependancies = dependancies
         self.exitPoints = exitPoints
-        self.readyForNextAction = readyForNextAction
     }
 
-    public func buildScreen1() -> UIViewController {
+    public func buildScreen1(readyForNextAction: @escaping PostAction = {}) -> UIViewController {
         return Screen1ViewController(exitPoints: exitPoints,
                                      dependancies: dependancies,
                                      readyForNextAction: readyForNextAction)

@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		EB30EEA428E9EB2900E262BB /* Module2Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EEA328E9EB2900E262BB /* Module2Factory.swift */; };
-		EB30EEA828E9FC5500E262BB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EEA728E9FC5500E262BB /* NetworkManager.swift */; };
+		EB30EEAB28EC26B500E262BB /* Dependancies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EEAA28EC26B500E262BB /* Dependancies.swift */; };
+		EB30EEAE28EC26E700E262BB /* GlobalDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EEAD28EC26E700E262BB /* GlobalDefinitions.swift */; };
 		EBB4FED328E9B01A00E3A23C /* Screen1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4FED228E9B01A00E3A23C /* Screen1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB30EEA328E9EB2900E262BB /* Module2Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module2Factory.swift; sourceTree = "<group>"; };
-		EB30EEA728E9FC5500E262BB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EB30EEAA28EC26B500E262BB /* Dependancies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependancies.swift; sourceTree = "<group>"; };
+		EB30EEAD28EC26E700E262BB /* GlobalDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDefinitions.swift; sourceTree = "<group>"; };
 		EBB4FEC828E9B01000E3A23C /* Module2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Module2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB4FED228E9B01A00E3A23C /* Screen1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -30,6 +32,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB30EEA928EC26A000E262BB /* Dependancies */ = {
+			isa = PBXGroup;
+			children = (
+				EB30EEAA28EC26B500E262BB /* Dependancies.swift */,
+			);
+			path = Dependancies;
+			sourceTree = "<group>";
+		};
+		EB30EEAC28EC26D800E262BB /* Global Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				EB30EEAD28EC26E700E262BB /* GlobalDefinitions.swift */,
+			);
+			path = "Global Definitions";
+			sourceTree = "<group>";
+		};
 		EBB4FEBE28E9B01000E3A23C = {
 			isa = PBXGroup;
 			children = (
@@ -49,9 +67,10 @@
 		EBB4FECA28E9B01000E3A23C /* Module2 */ = {
 			isa = PBXGroup;
 			children = (
+				EB30EEAC28EC26D800E262BB /* Global Definitions */,
+				EB30EEA928EC26A000E262BB /* Dependancies */,
 				EBB4FED228E9B01A00E3A23C /* Screen1ViewController.swift */,
 				EB30EEA328E9EB2900E262BB /* Module2Factory.swift */,
-				EB30EEA728E9FC5500E262BB /* NetworkManager.swift */,
 			);
 			path = Module2;
 			sourceTree = "<group>";
@@ -134,9 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB30EEA828E9FC5500E262BB /* NetworkManager.swift in Sources */,
+				EB30EEAB28EC26B500E262BB /* Dependancies.swift in Sources */,
 				EBB4FED328E9B01A00E3A23C /* Screen1ViewController.swift in Sources */,
 				EB30EEA428E9EB2900E262BB /* Module2Factory.swift in Sources */,
+				EB30EEAE28EC26E700E262BB /* GlobalDefinitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
